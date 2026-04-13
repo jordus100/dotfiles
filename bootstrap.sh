@@ -26,5 +26,3 @@ then
     echo 'alias "jordan=source ${DOTFILES_DIR}/activate.sh"' >> ~/.zshrc
     chsh -s /usr/bin/zsh
 fi
-
-source ${DOTFILES_DIR}/.zshrc
