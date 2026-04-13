@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 DOTFILES_DIR=~/.config/jordan_dotfiles
-REPO_URL=https://github.com/jordus100/dotfiles.git
+REPO_URL=https://github.com/jordus100/dotfiles
 declare -a Programs=('git' 'tmux')
 
 for prog in "${Programs[@]}"; do
