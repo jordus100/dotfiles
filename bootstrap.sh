@@ -2,7 +2,7 @@
 
 DOTFILES_DIR=~/.config/jordan_dotfiles
 REPO_URL=git@github.com:jordus100/dotfiles.git
-declare -a Programs=('git' 'tmux' 'zsh')
+declare -a Programs=('git' 'tmux')
 
 for prog in "${Programs[@]}"; do
   if ! command -v ${prog} >/dev/null 2>&1
@@ -16,6 +16,15 @@ if [ -d "$DOTFILES_DIR/.git" ]; then
   git -C "$DOTFILES_DIR" pull origin main --quiet
 else
   git clone --quiet --depth 1 "$REPO_URL" "$DOTFILES_DIR"
+fi
+
+if ! command -v 'zsh' >/dev/null 2>&1
+then
+    echo "Instaling zsh"
+    sudo apt install -y zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    echo 'alias "jordan=source ${DOTFILES_DIR}/activate.sh"' >> ~/.zshrc
+    chsh -s /usr/bin/zsh
 fi
 
 source ${DOTFILES_DIR}/.zshrc
