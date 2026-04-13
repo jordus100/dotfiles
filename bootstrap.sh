@@ -1,4 +1,5 @@
 #!/bin/env bash
+set -x
 
 DOTFILES_DIR=~/.config/jordan_dotfiles
 REPO_URL=https://github.com/jordus100/dotfiles
