@@ -26,3 +26,4 @@ if [[ ! $(which zsh) ]]; then
     echo 'alias "jordan=source ${DOTFILES_DIR}/activate.sh"' >> ~/.zshrc
     chsh -s /usr/bin/zsh
 fi
+zsh -i
