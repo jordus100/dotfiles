@@ -25,8 +25,8 @@ if [[ ! $(which zsh) ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     chsh -s /usr/bin/zsh
 fi
-if [[ ! $(grep 'alias "jordan' ~/.zshrc) ]]; then
-  echo 'alias "jordan=source ${DOTFILES_DIR}/activate.sh"' >> ~/.zshrc
+if [[ ! $(grep "alias 'jordan" ~/.zshrc) ]]; then
+  echo "alias 'jordan=source ${DOTFILES_DIR}/activate.sh'" >> ~/.zshrc
 fi
 
 zsh -i
