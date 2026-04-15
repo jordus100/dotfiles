@@ -26,7 +26,7 @@ if [[ ! $(which zsh) ]]; then
     chsh -s /usr/bin/zsh
 fi
 git clone https://github.com/jeffreytse/zsh-vi-mode \
-  $ZSH_CUSTOM/plugins/zsh-vi-mode
+  ~/.oh-my-zsh/plugins/zsh-vi-mode
 if [[ ! $(grep "alias 'jordan" ~/.zshrc) ]]; then
   echo "alias 'jordan=source ${DOTFILES_DIR}/activate.sh'" >> ~/.zshrc
 fi
