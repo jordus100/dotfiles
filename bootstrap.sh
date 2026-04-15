@@ -19,8 +19,7 @@ else
   git clone --quiet --depth 1 "$REPO_URL" "$DOTFILES_DIR"
 fi
 
-if ! command -v 'zsh' >/dev/null 2>&1
-then
+if [[ ! $(which zsh) ]]; then
     echo "Instaling zsh"
     sudo apt install -y zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
