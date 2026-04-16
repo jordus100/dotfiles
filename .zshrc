@@ -75,6 +75,3 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 if [ -f ~/.config/.zshrc_local ]; then
   source ~/.config/.zshrc_local
 fi
-
-[ -z "$TMUX"  ] && { tmux attach-session -t "jordan" || exec tmux new-session -s "jordan" }
-alias "jordan=source ${DOTFILES_DIR}/activate.sh"
