@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+# https://github.com/romkatv/zshi/blob/master/zshi
 
 emulate -L zsh -o no_unset
 
