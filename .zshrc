@@ -23,14 +23,14 @@ TIMEFMT='%J   %U  user %S system %P cpu %*E total'$'\n'\
 'page faults from disk:     %F'$'\n'\
 'other page faults:         %R'
 
-export EDITOR=nvim
+export EDITOR=vim
 # export MANPATH="/usr/local/man:$MANPATH"
 path+=/home/linuxbrew/.linuxbrew/bin
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 alias zrc="vi ~/.zshrc"
-alias vi="nvim"
+alias vi="vim"
 alias stf="mystf local"
 alias st="git status"
 alias com="git commit"
